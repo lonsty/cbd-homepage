@@ -1,4 +1,4 @@
 env/
 venv/
-.iead/
+.idea/
 __pycache__/
