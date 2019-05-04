@@ -133,12 +133,15 @@ CBDHomepage  # 项目名称
 ```
 
 # 2. 使用说明
-## 方式1：python3 直接使用
+
 1. 克隆远程仓库到本地
 
 ```bash
 git clone https://github.com/lonsty/CBDHomepage.git
 ```
+
+## 方式1：通过python3直接启动
+
 2. 进入项目文件夹
 
 ```bash
@@ -154,7 +157,37 @@ pip3 install -r requirements.txt
 4. 运行
 
 ```bash
-python3 manage.py -h 0.0.0.0 -p 80
+export FLASK_APP=flasky && flask run -h 0.0.0.0 -p 80
 ```
 
-然后使用浏览器打开`http://<本机IP>`即可看到项目首页。
+
+## 方式2：docker镜像启动
+
+2. 先将`CBDHomepage/Dockerfile/`目录下的`Dockerfile`复制到项目目录`CBDHomepage/`的同级目录
+
+```bash
+cp CBDHomepage/Dockerfile/Dockerfile .
+```
+
+结果将会是这样：
+
+```
+.
+├── CBDHomepage
+└── Dockerfile
+```
+
+3. 在移动后的`Dockerfile`目录下，打包docker镜像
+
+```bash
+docker build -t cbdhome .
+```
+
+4. 启动打包好的镜像
+
+```bash
+docker run --name CBDHomepage -d -p 80:80 cbdhome
+```
+
+任何一种方式运行成功后，通过浏览器打开`http://<本机IP>`即可看到项目首页。
+

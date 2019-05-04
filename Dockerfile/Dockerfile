@@ -1,8 +1,8 @@
-FROM python:3.5.2
+FROM python:3.7.1
 
-WORKDIR /flasky
+WORKDIR /CBDHomepage
 
-ADD ./flasky /flasky
+ADD ./CBDHomepage /CBDHomepage
 
 ENV FLASK_APP "flasky"
 ENV FLASK_CONFIG "production"
@@ -11,4 +11,5 @@ RUN pip install -r requirements.txt && cp /usr/share/zoneinfo/Hongkong /etc/loca
 
 EXPOSE 80
 
-CMD ["python", "manage.py", "runserver", "-h", "0.0.0.0", "-p", "80"]
+#CMD ["python", "manage.py", "runserver", "-h", "0.0.0.0", "-p", "80"]
+CMD ["flask", "run", "-h", "0.0.0.0", "-p", "80"]
