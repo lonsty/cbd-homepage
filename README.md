@@ -148,7 +148,7 @@ cd CBDHomepage
 3. 安装程序运行所需依赖包
 
 ```bash
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 4. 运行
