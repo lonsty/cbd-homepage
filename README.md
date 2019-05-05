@@ -2,7 +2,60 @@
 
 此web项目基于Python3 flask框架，前端主要使用了bootstrap4框架和jQuery工具，该项目借鉴了[flack](https://github.com/miguelgrinberg/flack)。
 
-# 1. 目录结构说明
+# 1. 历史版本
+
+##### version 1.0 (May 5 2019)
+
+- 完成用于宣传CBD的flask web应用。
+
+- 手机端，电脑端均可以访问宣传页，但以适配手机端为主。
+
+# 2. 使用说明
+
+1. 克隆远程仓库到本地
+
+```bash
+git clone https://github.com/lonsty/CBDHomepage.git
+```
+
+2. 进入项目文件夹
+
+```bash
+cd CBDHomepage
+```
+## 方式1：通过python3直接启动
+
+
+3. 安装程序运行所需依赖包
+
+```bash
+pip3 install -r requirements.txt
+```
+
+4. 运行
+
+```bash
+export FLASK_APP=flasky && flask run -h 0.0.0.0 -p 80
+```
+
+
+## 方式2：docker镜像启动
+
+3. 打包docker镜像
+
+```bash
+docker build -t cbdhome -f Dockerfile/Dockerfile .
+```
+
+4. 启动打包好的镜像
+
+```bash
+docker run --name CBDHomepage -d -p 80:80 cbdhome
+```
+
+任何一种方式运行成功后，通过浏览器打开`http://<本机IP>`即可看到项目首页。
+
+# 3. 目录结构
 
 ```
 CBDHomepage  # 项目名称
@@ -128,52 +181,6 @@ CBDHomepage  # 项目名称
 │       └── index.html  # 主页
 ├── LICENSE  # 项目许可证
 ├── manage.py  # 入口启动程序
-├── README.md  
+├── README.md  # 说明文件
 └── requirements.txt  # 项目第三方依赖包
 ```
-
-# 2. 使用说明
-
-1. 克隆远程仓库到本地
-
-```bash
-git clone https://github.com/lonsty/CBDHomepage.git
-```
-
-2. 进入项目文件夹
-
-```bash
-cd CBDHomepage
-```
-## 方式1：通过python3直接启动
-
-
-3. 安装程序运行所需依赖包
-
-```bash
-pip3 install -r requirements.txt
-```
-
-4. 运行
-
-```bash
-export FLASK_APP=flasky && flask run -h 0.0.0.0 -p 80
-```
-
-
-## 方式2：docker镜像启动
-
-3. 打包docker镜像
-
-```bash
-docker build -t cbdhome -f Dockerfile/Dockerfile .
-```
-
-4. 启动打包好的镜像
-
-```bash
-docker run --name CBDHomepage -d -p 80:80 cbdhome
-```
-
-任何一种方式运行成功后，通过浏览器打开`http://<本机IP>`即可看到项目首页。
-
