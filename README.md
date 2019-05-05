@@ -145,8 +145,6 @@ CBDHomepage  # 项目名称
 │   │   │   │   └── ZYCTDS2.jpg
 │   │   │   ├── logo.png
 │   │   │   ├── QD.jpg
-│   │   │   ├── QRcode1.jpg
-│   │   │   ├── QRcode.jpg
 │   │   │   ├── 中央商务区.jpg
 │   │   │   ├── 卓越创投大厦1.jpg
 │   │   │   ├── 卓越创投大厦2.jpg
