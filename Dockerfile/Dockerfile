@@ -2,7 +2,7 @@ FROM python:3.7.1
 
 WORKDIR /CBDHomepage
 
-ADD ./CBDHomepage /CBDHomepage
+ADD . /CBDHomepage
 
 ENV FLASK_APP "flasky"
 ENV FLASK_CONFIG "production"

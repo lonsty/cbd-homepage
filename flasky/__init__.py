@@ -5,14 +5,14 @@ from flask import Flask
 from config import config
 
 
-def create_app(config_name=None, main=True):
+def create_app(config_name=None):
     if config_name is None:
-        config_name = os.environ.get('FLACK_CONFIG', 'production')
+        config_name = os.environ.get('FLACK_CONFIG', 'development')
     app = Flask(__name__)
     app.config.from_object(config[config_name])
 
     # Register web application routes
-    from .cbd_home import main as main_blueprint
+    from .main import main as main_blueprint
     app.register_blueprint(main_blueprint)
 
     # Register API routes

@@ -140,13 +140,13 @@ CBDHomepage  # 项目名称
 git clone https://github.com/lonsty/CBDHomepage.git
 ```
 
-## 方式1：通过python3直接启动
-
 2. 进入项目文件夹
 
 ```bash
 cd CBDHomepage
 ```
+## 方式1：通过python3直接启动
+
 
 3. 安装程序运行所需依赖包
 
@@ -163,24 +163,10 @@ export FLASK_APP=flasky && flask run -h 0.0.0.0 -p 80
 
 ## 方式2：docker镜像启动
 
-2. 先将`CBDHomepage/Dockerfile/`目录下的`Dockerfile`复制到项目目录`CBDHomepage/`的同级目录
+3. 打包docker镜像
 
 ```bash
-cp CBDHomepage/Dockerfile/Dockerfile .
-```
-
-结果将会是这样：
-
-```
-.
-├── CBDHomepage
-└── Dockerfile
-```
-
-3. 在移动后的`Dockerfile`目录下，打包docker镜像
-
-```bash
-docker build -t cbdhome .
+docker build -t cbdhome -f Dockerfile/Dockerfile .
 ```
 
 4. 启动打包好的镜像
