@@ -6,11 +6,10 @@ import eventlet
 eventlet.monkey_patch()
 
 from flask_script import Manager, Server as _Server, Option
-
 from flasky import create_app
 
-manager = Manager(create_app)
 
+manager = Manager(create_app)
 
 class Server(_Server):
     help = description = 'Runs the CBD web server'
