@@ -1,10 +1,10 @@
-FROM python:3.5.2
+FROM python:3.7.1
 
-WORKDIR /flasky
+WORKDIR /CBDHomepage
 
-ADD ./flasky /flasky
+ADD ./CBDHomepage /CBDHomepage
 
-ENV FLASK_APP "flasky"
+ENV FLASK_APP "CBDHomepage"
 ENV FLASK_CONFIG "production"
 
 RUN pip install -r requirements.txt && cp /usr/share/zoneinfo/Hongkong /etc/localtime
