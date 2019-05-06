@@ -4,7 +4,11 @@
 
 # 1. 历史版本
 
-##### version 1.0 (May 5 2019)
+#### version 1.01 (May 6 2019)
+
+- 修改部分页面描述。
+
+#### version 1.0 (May 5 2019)
 
 - 完成用于宣传CBD的flask web应用。
 
