@@ -4,7 +4,7 @@ WORKDIR /CBDHomepage
 
 ADD . /CBDHomepage
 
-ENV FLASK_APP "CBDHomepage"
+ENV FLASK_APP "flasky"
 ENV FLASK_CONFIG "production"
 
 RUN pip install -r requirements.txt && cp /usr/share/zoneinfo/Hongkong /etc/localtime
