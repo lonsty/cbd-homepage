@@ -1,3 +1,5 @@
+[![Demo](https://img.shields.io/badge/Website-Demo-blue.svg)](http://120.27.1.52)
+
 # 青岛中央商务区宣传页
 
 此web项目基于Python3 flask框架，前端主要使用了bootstrap4框架和jQuery工具，该项目借鉴了[flack](https://github.com/miguelgrinberg/flack)。
